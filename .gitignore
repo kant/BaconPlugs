@@ -7,3 +7,7 @@ plugin.so
 standalone/exe_*
 pynb/.ipynb_checkpoints/*
 */.svn/*
+libs/tinyscheme-1.41/*.o
+libs/tinyscheme-1.41/*.so
+libs/tinyscheme-1.41/*.a
+libs/tinyscheme-1.41/scheme

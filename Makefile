@@ -2,8 +2,9 @@
 RACK_DIR ?= ../..
 include $(RACK_DIR)/arch.mk
 
+
 # FLAGS will be passed to both the C and C++ compiler
-FLAGS +=
+FLAGS += -Ilibs/tinyscheme-1.41 -DSTANDALONE=0 -DUSE_DL -DUSE_INTERFACE=1 -Wno-unused-function -Wno-switch
 CFLAGS +=
 CXXFLAGS += -Wno-array-bounds -Wno-strict-aliasing -Ilibs/midifile/include -Ilibs/open303-code/Source/DSPCode/
 
@@ -15,10 +16,11 @@ LDFLAGS +=
 SOURCES += $(wildcard src/*.cpp)
 SOURCES += $(wildcard libs/midifile/src/*.cpp)
 SOURCES += $(wildcard libs/open303-code/Source/DSPCode/*.cpp)
+SOURCES += libs/tinyscheme-1.41/scheme.c libs/tinyscheme-1.41/dynload.c
 
 # Add files to the ZIP package when running `make dist`
 # The compiled plugin is automatically added.
-DISTRIBUTABLES += $(wildcard LICENSE*) res patches README.md
+DISTRIBUTABLES += $(wildcard LICENSE*) res patches README.md libs/tinyscheme-1.41/init.scm
 
 include $(RACK_DIR)/plugin.mk
 

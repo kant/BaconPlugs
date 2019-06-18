@@ -83,6 +83,12 @@
 			"description": "A sub-par distortion and bit cruncher",
 			"tags": [ "Distortion", "Waveshaper", "Polyphonic" ]
 		},
+		{
+			"slug": "EvilSchemes",
+			"name": "EvilSchemes",
+			"description": "SICP + VCV = FUN",
+			"tags": [ "Utility", "Polyphonic" ]
+		},
         {
 			"slug": "PolyGenerator",
 			"name": "PolyGenerator",
