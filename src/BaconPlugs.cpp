@@ -34,4 +34,5 @@ void init(rack::Plugin *p) {
 #endif
 
     p->addModel(modelPolyGenerator);
+    p->addModel(modelEvilSchemes);
 }

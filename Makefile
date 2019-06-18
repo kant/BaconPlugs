@@ -1,3 +1,6 @@
+# Include the VCV plugin Makefile framework
+RACK_DIR ?= ../..
+include $(RACK_DIR)/arch.mk
 
 # FLAGS will be passed to both the C and C++ compiler
 FLAGS +=
@@ -17,8 +20,6 @@ SOURCES += $(wildcard libs/open303-code/Source/DSPCode/*.cpp)
 # The compiled plugin is automatically added.
 DISTRIBUTABLES += $(wildcard LICENSE*) res patches README.md
 
-# Include the VCV plugin Makefile framework
-RACK_DIR ?= ../..
 include $(RACK_DIR)/plugin.mk
 
 shadist:	dist
